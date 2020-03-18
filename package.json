@@ -2,19 +2,16 @@
 	"name": "@sndrs/ok",
 	"version": "0.1.0",
 	"description": "Cli app that runs `package.json` scripts in the specified environment without configuring yours.",
-	"author": "Alex Sanders",
-	"license": "MIT",
+	"homepage": "https://github.com/sndrs/ok#readme",
+	"bugs": {
+		"url": "https://github.com/sndrs/ok/issues"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/sndrs/ok.git"
 	},
-	"bugs": {
-		"url": "https://github.com/sndrs/ok/issues"
-	},
-	"homepage": "https://github.com/sndrs/ok#readme",
-	"engines": {
-		"node": ">=10.17.0 <13.10.0 || >=13.11.0"
-	},
+	"license": "MIT",
+	"author": "Alex Sanders",
 	"bin": {
 		"ok": "dist/ok.js"
 	},
@@ -22,9 +19,15 @@
 		"dist/ok.js"
 	],
 	"scripts": {
-		"clean": "rm -rf dist",
 		"build": "npm run clean && rollup -c",
+		"clean": "rm -rf dist",
 		"dev": "npm run clean && rollup -c -w"
+	},
+	"prettier": {
+		"semi": false,
+		"singleQuote": true,
+		"trailingComma": "all",
+		"useTabs": true
 	},
 	"dependencies": {
 		"chalk": "^3.0.0",
@@ -46,10 +49,7 @@
 		"tslib": "^1.11.1",
 		"typescript": "^3.8.3"
 	},
-	"prettier": {
-		"singleQuote": true,
-		"trailingComma": "all",
-		"useTabs": true,
-		"semi": false
+	"engines": {
+		"node": ">=10.17.0 <13.10.0 || >=13.11.0"
 	}
 }
