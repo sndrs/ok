@@ -1,6 +1,6 @@
 {
 	"name": "@sndrs/ok",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Cli app that runs `package.json` scripts in the specified environment without configuring yours.",
 	"homepage": "https://github.com/sndrs/ok#readme",
 	"bugs": {
