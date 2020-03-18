@@ -1,6 +1,6 @@
 # ok
 
-Run `package.json` scripts in the specified environment without configuring yours.
+Cli app that runs `package.json` scripts in the specified environment without configuring yours.
 
 ### Follow project conventions
 
