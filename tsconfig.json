@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "pretty": true,
+        "target": "es2018",
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    },
+    "include": ["src", "types.d.ts"],
+    "exclude": ["dist", "node_modules"]
+}
