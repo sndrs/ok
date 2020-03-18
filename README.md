@@ -1,8 +1,12 @@
 # ok
 
-Cli app that runs `package.json` scripts in the specified environment without configuring yours.
+> 🙇‍♂️ An obliging task runner
 
-### Follow project conventions
+Run a project’s `package.json` scripts in a stipulated environment without configuring yours.
+
+<img src="demo.gif" width="444">
+
+### Follows project conventions
 
 -   [x] fetch and use correct node version, observing:
     -   [x] `.nvmrc`
@@ -23,7 +27,7 @@ Cli app that runs `package.json` scripts in the specified environment without co
 -   [x] do not change the system Node
 -   [x] do not install node versions if unnecessary
 
-### DX
+### Experience
 
 -   [x] Notify when using out-of-date version
 -   [x] All user task output should be shown – no magic
