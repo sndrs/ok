@@ -1,6 +1,6 @@
 {
 	"name": "@sndrs/ok",
-	"version": "0.1.0",
+	"version": "0.0.0",
 	"description": "Cli app that runs `package.json` scripts in the specified environment without configuring yours.",
 	"homepage": "https://github.com/sndrs/ok#readme",
 	"bugs": {
@@ -21,7 +21,8 @@
 	"scripts": {
 		"build": "npm run clean && rollup -c",
 		"clean": "rm -rf dist",
-		"dev": "npm run clean && rollup -c -w"
+		"dev": "npm run clean && rollup -c -w",
+		"publish": "npm run build && np 0.1.0 --preview"
 	},
 	"prettier": {
 		"semi": false,
@@ -45,6 +46,7 @@
 		"@types/node": "13.9.1",
 		"@types/semver": "^7.1.0",
 		"@types/update-notifier": "4.1.0",
+		"np": "^6.2.0",
 		"rollup": "^2.1.0",
 		"tslib": "^1.11.1",
 		"typescript": "^3.8.3"
