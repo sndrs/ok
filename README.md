@@ -4,6 +4,10 @@
 
 Run a project’s `package.json` scripts in a stipulated environment without configuring yours.
 
+```bash
+npm i -g @sndrs/ok
+```
+
 <img src="demo.gif" width="444">
 
 ### Follows project conventions
