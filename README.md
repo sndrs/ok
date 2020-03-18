@@ -1,16 +1,36 @@
 # ok
 
-> Runs package scripts in the correct environment without configuring yours.
+> Run tasks in the specified environment without configuring yours.
 
-Leaves the host environment alone:
+## Follow project conventions
 
--   runs in whatever version of node you have installed – no `nvm`/`n` etc needed
--   doesn't touch the system Node installation
--   no changes to your `$PATH` etc
--   bundles `yarn`, so no further installation is needed
+-   [x] fetch and use correct node version, observing:
+    -   [x] `.nvmrc`
+    -   [x] `engines`
+-   [x] use project package manager (`yarn` or `npm`)
+    -   [x] use the checked in yarn version if present
+    -   [ ] use `engines` npm if present
+-   [x] always run tasks with up-to-date dependencies
 
-Follows project requirements:
+## No futher installations necessary
 
--   observes `.nvmrc` and `engines.node`
--   uses `yarn` or `npm` based on the project
--   uses the checked in yarn version if present
+-   [x] `yarn` does not need to be installed
+-   [x] no `nvm`/`n` etc needed
+
+## Change host env as little as possible
+
+-   [x] no changes to `$PATH`
+-   [x] do not change the system Node
+-   [x] do not install node versions if unnecessary
+
+## DX
+
+-   [x] Notify when using out-of-date version
+-   [x] All user task output should be shown – no magic
+-   [ ] All available scripts in current context discoverable by running without args (`ok`)
+
+## Other
+
+-   [ ] Use local version if available?
+-   [ ] enable `ok.config.js`?
+-   [ ] discover `make` targets?
