@@ -22,7 +22,7 @@
 		"build": "npm run clean && rollup -c",
 		"clean": "rm -rf dist",
 		"dev": "npm run clean && rollup -c -w",
-		"publish": "npm run build && np 0.1.0 --preview"
+		"publish": "npm run build && np"
 	},
 	"prettier": {
 		"semi": false,
