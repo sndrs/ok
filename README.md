@@ -2,7 +2,7 @@
 
 Run tasks in the specified environment without configuring yours.
 
-## Follow project conventions
+### Follow project conventions
 
 -   [x] fetch and use correct node version, observing:
     -   [x] `.nvmrc`
@@ -12,24 +12,24 @@ Run tasks in the specified environment without configuring yours.
     -   [ ] use `engines` npm if present
 -   [x] always run tasks with up-to-date dependencies
 
-## No futher installations necessary
+### No futher installations necessary
 
 -   [x] `yarn` does not need to be installed
 -   [x] no `nvm`/`n` etc needed
 
-## Change host env as little as possible
+### Change host env as little as possible
 
 -   [x] no changes to `$PATH`
 -   [x] do not change the system Node
 -   [x] do not install node versions if unnecessary
 
-## DX
+### DX
 
 -   [x] Notify when using out-of-date version
 -   [x] All user task output should be shown – no magic
 -   [ ] All available scripts in current context discoverable by running without args (`ok`)
 
-## Other
+### Other
 
 -   [ ] Use local version if available?
 -   [ ] enable `ok.config.js`?
