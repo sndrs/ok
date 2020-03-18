@@ -22,7 +22,7 @@
 		"build": "npm run clean && rollup -c",
 		"clean": "rm -rf dist",
 		"dev": "npm run clean && rollup -c -w",
-		"publish": "npm run build && np"
+		"np": "npm run build && np"
 	},
 	"prettier": {
 		"semi": false,
@@ -55,6 +55,7 @@
 		"node": ">=10.17.0 <13.10.0 || >=13.11.0"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
 	}
 }
