@@ -5,7 +5,19 @@
 Automatically run a project’s `package.json` scripts in the right environment with no additional installation or config.
 
 ```bash
-npm i -g @sndrs/ok
+$ npm i -g @sndrs/ok
+```
+
+```js
+// package.json
+{
+    "scripts": {
+        "test": "echo 'write some tests'"
+    },
+    "engines": {
+        "node": "12"
+    }
+}
 ```
 
 <img src="demo.gif" width="444">
