@@ -1,6 +1,6 @@
 # ok
 
-> Run tasks in the specified environment without configuring yours.
+Run tasks in the specified environment without configuring yours.
 
 ## Follow project conventions
 
