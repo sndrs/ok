@@ -1,8 +1,8 @@
 # ok
 
-> 🙇‍♂️ An obliging task runner
+> 🙇‍♂️ Obliging task runner
 
-Automatically run a project’s `package.json` scripts in a stipulated environment without further installations or configuration.
+Automatically run a project’s `package.json` scripts in the right environment with no additional installation or config.
 
 ```bash
 npm i -g @sndrs/ok
@@ -42,3 +42,7 @@ npm i -g @sndrs/ok
 -   [ ] Use local version if available?
 -   [ ] enable `ok.config.js`?
 -   [ ] discover `make` targets?
+
+# See also
+
+-   [`nvexeca`](https://github.com/ehmicky/nvexeca): `nvm` + `execa`
