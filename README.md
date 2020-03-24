@@ -1,8 +1,8 @@
 # ok
 
-> 🙇‍♂️ Obliging task runner
+> 🙇‍♂️ An obliging task runner
 
-Automatically run a project’s `package.json` scripts in the right environment with no additional installation or config.
+Run `npm-scripts` in the correct environment without further installation or config.
 
 ```bash
 npm i -g @sndrs/ok
