@@ -1,11 +1,8 @@
 import chalk from 'chalk'
 import execa from 'execa'
-import fs from 'fs'
 import nvexeca from 'nvexeca'
-import path from 'path'
 import coerce from 'semver/functions/coerce'
-import satisfies from 'semver/functions/satisfies'
-import { getNodeRange } from './get-node-range'
+import { getEnv } from './env'
 import { info } from './log'
 
 const tick = chalk.green('✓')
@@ -14,12 +11,7 @@ const workingEnv = (node: string, pm: string) =>
 	`${tick} Using ${pm} and Node v${coerce(node)}`
 
 export const run = async (tasks: string[] = []) => {
-	const nodeRange = getNodeRange()
-
-	const useCurrentNode = satisfies(process.version, nodeRange)
-
-	const yarnLockPath = path.resolve(process.cwd(), 'yarn.lock')
-	const packageManager = fs.existsSync(yarnLockPath) ? 'yarn' : 'npm'
+	const { nodeRange, packageManager, useCurrentNode } = await getEnv()
 
 	const _execa = (args: string[]) =>
 		useCurrentNode

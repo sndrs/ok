@@ -33,6 +33,7 @@
 	"dependencies": {
 		"chalk": "^3.0.0",
 		"execa": "4.0.0",
+		"has-yarn": "2.1.0",
 		"meow": "^6.0.1",
 		"nvexeca": "2.1.1",
 		"semver": "^7.1.3",

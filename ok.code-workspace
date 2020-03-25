@@ -1,0 +1,17 @@
+{
+    "folders": [
+		{
+			"name": "ok",
+			"path": "."
+		},
+		{
+			"name": "ok-test-yarn",
+			"path": "/Users/alexsanders/Dev/ok-test-yarn"
+		},
+		{
+			"name": "ok-test-npm",
+			"path": "/Users/alexsanders/Dev/ok-test-npm"
+		}
+	],
+    "settings": {}
+}
