@@ -32,7 +32,7 @@ $ npm i -g @sndrs/ok
     -   [ ] use `engines` npm if present
 -   [x] always run tasks with up-to-date dependencies
 
-### No futher installations necessary
+### No dependencies
 
 -   [x] `yarn` does not need to be installed
 -   [x] no `nvm`/`n` etc needed
@@ -42,6 +42,7 @@ $ npm i -g @sndrs/ok
 -   [x] no changes to `$PATH`
 -   [x] do not change the system Node
 -   [x] do not install node versions if unnecessary
+-   [x] do not affect NVM
 
 ### Experience
 
