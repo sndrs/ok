@@ -12,20 +12,6 @@ or
 $ npm install -g @sndrs/ok
 ```
 
-```js
-// package.json
-{
-    "scripts": {
-        "test": "echo 'write some tests'"
-    },
-    "engines": {
-        "node": "12"
-    }
-}
-```
-
-<img src="demo.gif" width="444">
-
 ### Follows project conventions
 
 -   [x] fetch and use correct node version, observing:
@@ -54,11 +40,28 @@ $ npm install -g @sndrs/ok
 -   [x] All user task output should be shown – no magic
 -   [ ] All available scripts in current context discoverable by running without args (`ok`)
 
-### Other
+### Maybe...
 
 -   [ ] Use local version if available?
 -   [ ] enable `ok.config.js`?
 -   [ ] discover `make` targets?
+
+
+# Demo
+
+```js
+// package.json
+{
+    "scripts": {
+        "test": "echo 'write some tests'"
+    },
+    "engines": {
+        "node": "12"
+    }
+}
+```
+
+<img src="demo.gif" width="444">
 
 # See also
 
