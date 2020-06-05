@@ -6,6 +6,10 @@ Automatically run a project’s `package.json` scripts in the right environment 
 
 <a href="https://npmjs.org/package/@sndrs/ok" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@sndrs/ok.svg" alt="NPM version" /></a>
 
+<img src="demo.gif" width="444">
+
+## Install
+
 ```bash
 $ yarn global add @sndrs/ok
 ```
@@ -42,29 +46,12 @@ $ npm install -g @sndrs/ok
 -   [x] All user task output should be shown – no magic
 -   [ ] All available scripts in current context discoverable by running without args (`ok`)
 
-### Maybe...
+#### Maybe...
 
 -   [ ] Use local version if available?
 -   [ ] enable `ok.config.js`?
 -   [ ] discover `make` targets?
 
-
-# Demo
-
-```js
-// package.json
-{
-    "scripts": {
-        "test": "echo 'write some tests'"
-    },
-    "engines": {
-        "node": "12"
-    }
-}
-```
-
-<img src="demo.gif" width="444">
-
-# See also
+## See also
 
 -   [`nvexeca`](https://github.com/ehmicky/nvexeca): `nvm` + `execa`
