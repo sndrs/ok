@@ -1,8 +1,10 @@
-# ok <a href="https://npmjs.org/package/@sndrs/ok" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@sndrs/ok.svg" alt="NPM version" /></a>
+# ok 
 
 > 🙇‍♂️ Obliging task runner 
 
 Automatically run a project’s `package.json` scripts in the right environment with no additional installation or config.
+
+<a href="https://npmjs.org/package/@sndrs/ok" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@sndrs/ok.svg" alt="NPM version" /></a>
 
 ```bash
 $ yarn global add @sndrs/ok
