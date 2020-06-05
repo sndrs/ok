@@ -4,11 +4,11 @@
 
 Automatically run a project’s `package.json` scripts in the right environment with no additional installation or config.
 
+<p align="center"><img src="demo.gif" width="444"></p>
+
+## Install 
+
 <a href="https://npmjs.org/package/@sndrs/ok" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@sndrs/ok.svg" alt="NPM version" /></a>
-
-<img src="demo.gif" width="444">
-
-## Install
 
 ```bash
 $ yarn global add @sndrs/ok
