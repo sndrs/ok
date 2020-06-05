@@ -5,7 +5,11 @@
 Automatically run a project’s `package.json` scripts in the right environment with no additional installation or config.
 
 ```bash
-$ npm i -g @sndrs/ok
+$ yarn global add @sndrs/ok
+```
+or
+```bash
+$ npm install -g @sndrs/ok
 ```
 
 ```js
