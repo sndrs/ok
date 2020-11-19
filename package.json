@@ -19,9 +19,9 @@
 		"dist/ok.js"
 	],
 	"scripts": {
-		"build": "npm run clean && rollup -c",
+		"build": "npm run clean && rollup -c && chmod +x dist/ok.js",
 		"clean": "rm -rf dist",
-		"dev": "npm run clean && rollup -c -w",
+		"dev": "rollup -c -w && chmod +x dist/ok.js",
 		"np": "npm run build && np"
 	},
 	"prettier": {
