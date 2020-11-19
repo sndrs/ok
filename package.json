@@ -31,25 +31,25 @@
 		"useTabs": true
 	},
 	"dependencies": {
-		"chalk": "^3.0.0",
-		"execa": "4.0.0",
-		"meow": "^6.0.1",
-		"nvexeca": "2.1.1",
-		"semver": "^7.1.3",
-		"update-notifier": "4.1.0",
-		"yarn": "1.22.4"
+		"chalk": "^4.1.0",
+		"execa": "4.1.0",
+		"meow": "^8.0.0",
+		"nvexeca": "6.0.1",
+		"semver": "^7.3.2",
+		"update-notifier": "5.0.1",
+		"yarn": "1.22.10"
 	},
 	"devDependencies": {
 		"@robmarr/rollup-plugin-shebang": "^1.0.1",
-		"@rollup/plugin-typescript": "^4.0.0",
+		"@rollup/plugin-typescript": "^6.1.0",
 		"@types/meow": "^5.0.0",
-		"@types/node": "13.9.1",
-		"@types/semver": "^7.1.0",
-		"@types/update-notifier": "4.1.0",
-		"np": "^6.2.0",
-		"rollup": "^2.1.0",
-		"tslib": "^1.11.1",
-		"typescript": "^3.8.3"
+		"@types/node": "14.14.8",
+		"@types/semver": "^7.3.4",
+		"@types/update-notifier": "5.0.0",
+		"np": "^7.0.0",
+		"rollup": "^2.33.3",
+		"tslib": "^2.0.3",
+		"typescript": "^4.0.5"
 	},
 	"engines": {
 		"node": ">=10.17.0 <13.10.0 || >=13.11.0"
