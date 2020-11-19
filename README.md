@@ -46,7 +46,7 @@ $ npm install -g @sndrs/ok
 
 -   [x] Notify when using out-of-date version
 -   [x] All user task output should be shown – no magic
--   [ ] All available scripts in current context discoverable by running without args (`ok`)
+-   [x] All available scripts in current context discoverable by running without args (`ok`)
 
 #### Maybe...
 
