@@ -1,19 +1,21 @@
-# ok 
+# ok
 
-> 🙇‍♂️ Obliging task runner 
+> 🙇‍♂️ An obliging task runner
 
-Automatically run a project’s `package.json` scripts in the right environment with no additional installation or config.
+Run `npm-scripts` in the correct environment without further installation or config.
 
 <img src="demo.gif" width="444">
 
-## Install 
+## Install
 
 <a href="https://npmjs.org/package/@sndrs/ok" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@sndrs/ok.svg" alt="NPM version" /></a>
 
 ```bash
 $ yarn global add @sndrs/ok
 ```
+
 or
+
 ```bash
 $ npm install -g @sndrs/ok
 ```
@@ -25,7 +27,7 @@ $ npm install -g @sndrs/ok
     -   [x] `engines`
 -   [x] use project package manager (`yarn` or `npm`)
     -   [x] use the checked in yarn version if present
-    -   [ ] use `engines` npm if present
+    -   [x] use `engines` npm if present
 -   [x] always run tasks with up-to-date dependencies
 
 ### No dependencies
