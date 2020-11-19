@@ -35,6 +35,8 @@ if (cli.input.length) {
 	info(
 		`The following tasks are available:\n\nin package.json\n- ${Object.keys(
 			require(path.resolve(process.cwd(), 'package.json')).scripts,
-		).join('\n- ')}`,
+		)
+			.sort()
+			.join('\n- ')}`,
 	)
 }
