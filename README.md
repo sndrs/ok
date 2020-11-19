@@ -4,11 +4,19 @@
 
 Run `npm-scripts` in the correct environment without further installation or config.
 
-```bash
-npm i -g @sndrs/ok
-```
-
 <img src="demo.gif" width="444">
+
+## Install 
+
+<a href="https://npmjs.org/package/@sndrs/ok" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@sndrs/ok.svg" alt="NPM version" /></a>
+
+```bash
+$ yarn global add @sndrs/ok
+```
+or
+```bash
+$ npm install -g @sndrs/ok
+```
 
 ### Follows project conventions
 
@@ -20,7 +28,7 @@ npm i -g @sndrs/ok
     -   [ ] use `engines` npm if present
 -   [x] always run tasks with up-to-date dependencies
 
-### No futher installations necessary
+### No dependencies
 
 -   [x] `yarn` does not need to be installed
 -   [x] no `nvm`/`n` etc needed
@@ -30,6 +38,7 @@ npm i -g @sndrs/ok
 -   [x] no changes to `$PATH`
 -   [x] do not change the system Node
 -   [x] do not install node versions if unnecessary
+-   [x] do not affect NVM
 
 ### Experience
 
@@ -37,12 +46,12 @@ npm i -g @sndrs/ok
 -   [x] All user task output should be shown – no magic
 -   [ ] All available scripts in current context discoverable by running without args (`ok`)
 
-### Other
+#### Maybe...
 
 -   [ ] Use local version if available?
 -   [ ] enable `ok.config.js`?
 -   [ ] discover `make` targets?
 
-# See also
+## See also
 
 -   [`nvexeca`](https://github.com/ehmicky/nvexeca): `nvm` + `execa`
