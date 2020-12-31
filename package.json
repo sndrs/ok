@@ -13,13 +13,13 @@
 	"license": "MIT",
 	"author": "Alex Sanders",
 	"bin": {
-		"ok": "dist/ok.js"
+		"ok": "dist/index.js"
 	},
 	"files": [
-		"dist/ok.js"
+		"dist/*"
 	],
 	"scripts": {
-		"build": "npm run clean && rollup -c && chmod +x dist/ok.js",
+		"build": "npm run clean && yarn tsc && yarn pkg . -t node12-macos-x64",
 		"clean": "rm -rf dist",
 		"dev": "rollup -c -w && chmod +x dist/ok.js",
 		"np": "npm run build && np"
@@ -34,7 +34,9 @@
 		"chalk": "^4.1.0",
 		"execa": "4.1.0",
 		"meow": "^8.0.0",
+		"minimist": "^1.2.5",
 		"nvexeca": "6.0.1",
+		"read-pkg-up": "^7.0.1",
 		"semver": "^7.3.2",
 		"update-notifier": "5.0.1",
 		"yarn": "1.22.10"
@@ -47,7 +49,9 @@
 		"@types/semver": "^7.3.4",
 		"@types/update-notifier": "5.0.0",
 		"np": "^7.0.0",
+		"pkg": "^4.4.9",
 		"rollup": "^2.33.3",
+		"ts-node": "^9.1.1",
 		"tslib": "^2.0.3",
 		"typescript": "^4.0.5"
 	},

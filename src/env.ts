@@ -6,7 +6,7 @@ import validRange from 'semver/ranges/valid'
 import { error, info } from './log'
 
 const cwd = process.cwd()
-const engines = require(path.resolve(cwd, 'package.json'))?.engines
+const engines = require('read-pkg-up').sync().packageJson.engines
 
 let packageManager = fs.existsSync(path.resolve(cwd, 'yarn.lock'))
 	? 'yarn'
