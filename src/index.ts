@@ -1,24 +1,77 @@
-import minimist from 'minimist'
-import updateNotifier from 'update-notifier'
-import { info } from './log'
-import { run } from './run'
+import parseArgs from 'minimist';
+import path from 'path';
+import readPackageUp from 'read-pkg-up';
+import updateNotifier from 'update-notifier';
+import report from 'yurnalist';
+import { exec } from './exec';
+import getNode from 'get-node';
+import { getPackageManager } from './getPackageManager';
+import getPreferredNodeVersion from 'preferred-node-version';
+import { installDeps } from './installDeps';
+import { error, failed, script, success } from './log';
+import { validatePackageManager } from './validatePackageManager';
 
-const pkg = require('read-pkg-up').sync().packageJson
-updateNotifier({ pkg }).notify()
+(async () => {
+	try {
+		const packageUp = await readPackageUp();
 
-const { _: scripts } = minimist(process.argv.slice(2))
+		if (packageUp) {
+			const packageRoot = path.dirname(packageUp.path);
+			const pkg = packageUp.packageJson;
 
-const logScripts = () =>
-	info(
-		`The following tasks are available:\n- ${Object.keys(pkg.scripts)
-			.sort()
-			.join('\n- ')}`,
-	)
+			updateNotifier({ pkg: require('../package.json') }).notify();
 
-if (pkg.scripts) {
-	if (scripts.length) {
-		run(scripts)
-	} else {
-		logScripts()
+			const { version: nodeVersion } = await getPreferredNodeVersion();
+			await getNode(nodeVersion, { progress: true });
+			success(`Using Node v${nodeVersion}`);
+
+			const packageManager = getPackageManager(packageRoot, pkg);
+			success(`Using ${packageManager}`);
+
+			await validatePackageManager(packageManager, pkg);
+
+			await installDeps(packageManager);
+			success(`Refresh dependencies`);
+
+			const runScript = async (args: string[] = []) => {
+				try {
+					script([packageManager, 'run', ...args].join(' '));
+					const { exitCode, stdout, stderr } = await exec([
+						packageManager,
+						'run',
+						...args,
+					]);
+
+					if (stdout) console.log(stdout);
+					if (stderr) console.error(stderr);
+					process.exit(exitCode);
+				} catch (e) {
+					error(e.message);
+				}
+			};
+
+			const { _: args } = parseArgs(process.argv.slice(2));
+
+			if (args.length) {
+				runScript(process.argv.slice(2));
+			} else {
+				if (pkg.scripts) {
+					const tasks = Object.keys(pkg.scripts)
+						.sort()
+						.map((_) => ({ name: _, value: _ }));
+					report
+						.select(
+							'The following tasks are available',
+							'Which one do you want to run',
+							tasks,
+						)
+						.then((script: string) => runScript([script]));
+				}
+			}
+		} else {
+			failed('Could not find package.json');
+		}
+	} catch (e) {
+		console.log(e);
 	}
-}
+})();
