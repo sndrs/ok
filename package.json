@@ -19,10 +19,10 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "npm run clean && rollup -c && chmod +x dist/ok.js",
+    "build": "yarn run clean && rollup -c && chmod +x dist/ok.js",
     "clean": "rm -rf dist",
     "dev": "rollup -c -w && chmod +x dist/ok.js",
-    "np": "npm run build && np",
+    "np": "yarn run build && np",
     "nothing": "echo 'done nothing'"
   },
   "prettier": "@guardian/prettier",
