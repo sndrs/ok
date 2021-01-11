@@ -1,5 +1,5 @@
-import shebang from '@robmarr/rollup-plugin-shebang'
-import typescript from '@rollup/plugin-typescript'
+import shebang from '@robmarr/rollup-plugin-shebang';
+import typescript from '@rollup/plugin-typescript';
 
 export default {
 	input: 'src/index.ts',
@@ -8,16 +8,18 @@ export default {
 		format: 'cjs',
 	},
 	external: [
-		'meow',
 		'fs',
 		'path',
 		'nvexeca',
 		'chalk',
-		'semver/functions/coerce',
 		'semver/functions/satisfies',
 		'semver/ranges/valid',
-		'execa',
 		'update-notifier',
+		'minimist',
+		'read-pkg-up',
+		'get-node',
+		'ora',
+		'preferred-pm',
 	],
 	plugins: [shebang(), typescript()],
-}
+};

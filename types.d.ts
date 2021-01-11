@@ -1,1 +1,1 @@
-declare module 'nvexeca'
+declare module 'nvexeca';
