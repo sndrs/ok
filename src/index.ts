@@ -5,7 +5,7 @@ import readPackageUp from 'read-pkg-up';
 import updateNotifier from 'update-notifier';
 import { exit } from './exit';
 import { getEnv } from './getEnv';
-import { error, info } from './log';
+import { error, info, running } from './log';
 import { updateDeps } from './updateDeps';
 
 (async () => {
@@ -22,6 +22,8 @@ import { updateDeps } from './updateDeps';
 			const { _: args } = parseArgs(process.argv.slice(2));
 
 			if (args.length) {
+				running([packageManager, ...process.argv.slice(2)].join(' '));
+
 				const { childProcess: runScripts } = await nvexeca(
 					'local',
 					packageManager,
@@ -31,6 +33,8 @@ import { updateDeps } from './updateDeps';
 						localDir: __dirname,
 					},
 				);
+
+				if (packageManager !== 'npm') console.log();
 
 				const { exitCode, stdout, stderr } = await runScripts;
 
