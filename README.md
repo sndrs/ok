@@ -4,7 +4,7 @@
 
 Run `npm-scripts` in the correct environment without further installation or config.
 
-<img src="demo.gif" width="444">
+<img src="demo.gif" width="455">
 
 ## Install
 
@@ -20,39 +20,36 @@ or
 $ npm install -g @sndrs/ok
 ```
 
+Then use it to run your `npm-scripts`:
+
+```bash
+$ ok test # etc...
+```
+
+### Changes the host env as little as possible
+
+-   no changes to `$PATH`
+-   does not change the system Node
+-   does not affect `NVM`, `fnm` etc
+
 ### Follows project conventions
 
--   [x] fetch and use correct node version, observing:
-    -   [x] `.nvmrc`
-    -   [x] `engines`
--   [x] use project package manager (`yarn` or `npm`)
-    -   [x] use the checked in yarn version if present
-    -   [x] use `engines` npm if present
--   [x] always run tasks with up-to-date dependencies
+-   uses correct Node version, observing [`.nvmrc`, `engines` and more](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
+-   use project package manager (`yarn`, `npm` or `pnpm`)
+    -   use the checked in yarn version if present
+    -   use `engines` npm if present
+-   always run tasks with up-to-date dependencies
 
-### No dependencies
+### No other dependencies
 
--   [x] `yarn` does not need to be installed
--   [x] no `nvm`/`n` etc needed
-
-### Change host env as little as possible
-
--   [x] no changes to `$PATH`
--   [x] do not change the system Node
--   [x] do not install node versions if unnecessary
--   [x] do not affect NVM
+-   uses its own copy of `yarn` if it is not installed
+-   no `nvm`/`n` etc needed
 
 ### Experience
 
--   [x] Notify when using out-of-date version
--   [x] All user task output should be shown – no magic
--   [x] All available scripts in current context discoverable by running without args (`ok`)
-
-#### Maybe...
-
--   [ ] Use local version if available?
--   [ ] enable `ok.config.js`?
--   [ ] discover `make` targets?
+-   Notifies you if you're using out-of-date version
+-   All task output is shown – no magic
+-   All available scripts in current context are discoverable by running without args (`> ok`)
 
 ## See also
 
