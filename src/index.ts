@@ -25,7 +25,7 @@ import { updateDeps } from './updateDeps';
 				const { childProcess: runScripts } = await nvexeca(
 					'local',
 					packageManager,
-					['-s', ...process.argv.slice(2)],
+					process.argv.slice(2),
 					{
 						stdio: 'inherit',
 						localDir: __dirname,
