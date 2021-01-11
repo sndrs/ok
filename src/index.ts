@@ -1,4 +1,3 @@
-import parseArgs from 'minimist';
 import nvexeca from 'nvexeca';
 import path from 'path';
 import readPackageUp from 'read-pkg-up';
@@ -16,25 +15,28 @@ import { updateDeps } from './updateDeps';
 			const pkg = packageUp.packageJson;
 
 			const { packageManager } = await getEnv(packageRoot, pkg);
+			const isNpm = packageManager === 'npm';
 
 			await updateDeps(packageManager);
 
-			const { _: args } = parseArgs(process.argv.slice(2));
+			const args = process.argv.slice(2);
 
 			if (args.length) {
-				running([packageManager, ...process.argv.slice(2)].join(' '));
+				if (isNpm) args.unshift('run');
+
+				running([packageManager, ...args].join(' '));
 
 				const { childProcess: runScripts } = await nvexeca(
 					'local',
 					packageManager,
-					process.argv.slice(2),
+					['run', ...process.argv.slice(2)],
 					{
 						stdio: 'inherit',
 						localDir: __dirname,
 					},
 				);
 
-				if (packageManager !== 'npm') console.log();
+				if (!isNpm) console.log();
 
 				const { exitCode, stdout, stderr } = await runScripts;
 
