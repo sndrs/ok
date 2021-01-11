@@ -28,28 +28,29 @@ $ ok test # etc...
 
 ### Changes the host env as little as possible
 
--   no changes to `$PATH`
--   does not change the system Node
--   does not affect `NVM`, `fnm` etc
+`ok` uses [nvexeca](https://github.com/ehmicky/nvexeca) behind the scenes. This means:
+
+-   it does not need to make changes to `$PATH`
+-   it does not affect existing Node versions
+-   it does not affect `NVM`, `fnm` etc
 
 ### Follows project conventions
 
 -   uses correct Node version, observing [`.nvmrc`, `engines` and more](https://github.com/ehmicky/preferred-node-version/blob/main/README.md)
--   use project package manager (`yarn`, `npm` or `pnpm`)
-    -   use the checked in yarn version if present
-    -   use `engines` npm if present
+-   uses the correct package manager for the project ([`yarn`, `npm` or `pnpm`](https://github.com/zkochan/packages/tree/master/preferred-pm))
+    -   observes `engines.npm` if present (unlike npm)
 -   always run tasks with up-to-date dependencies
 
-### No other dependencies
+### No further dependencies
 
--   uses its own copy of `yarn` if it is not installed
--   no `nvm`/`n` etc needed
+-   uses its own copy of `yarn` if it cannot find one
+-   no `nvm`/`n`/`fnm` etc needed
 
 ### Experience
 
--   Notifies you if you're using out-of-date version
 -   All task output is shown – no magic
 -   All available scripts in current context are discoverable by running without args (`> ok`)
+-   Notifies you if you're using out-of-date version
 
 ## See also
 
