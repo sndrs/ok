@@ -1,6 +1,6 @@
 {
   "name": "@sndrs/ok",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Run `npm-scripts` in the correct environment without further installation or config.",
   "homepage": "https://github.com/sndrs/ok#readme",
   "bugs": {
